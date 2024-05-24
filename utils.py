@@ -28,11 +28,10 @@ def debounce_replicate_run(llm, prompt, max_len, temperature, top_p, API_TOKEN,m
     try:
         # Replace with the correct model reference
         model_reference = model_reference
-
         print("The API_TOKEN", API_TOKEN)
 
         # Initialize a client object with API token
-        client = replicate.Client(api_token=API_TOKEN)
+        client = replicate.Client(api_token='r8_04wHei1fmgZ0XAPwFWGJdZIh01pOikU071HiD')
 
         # Attempt to call the Replicate API
         output = client.run(
