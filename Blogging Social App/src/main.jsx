@@ -5,6 +5,7 @@ import './index.css'
 import { ChakraProvider } from '@chakra-ui/react'
 import { extendTheme } from '@chakra-ui/react'
 import {mode} from '@chakra-ui/theme-tools'
+import {BrowserRouter} from 'react-router-dom' //Allows us to use any component that is comming from the react router dom library
 
 //Created the styles object with the global function to change the body background and color
 //First value is for the light mode while the last value is for the dark mode
@@ -28,9 +29,12 @@ const theme = extendTheme({ config, styles })
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  //The Browser Router allows us to use any component that is coming from the react router dom library
+  <React.StrictMode> 
+    <BrowserRouter>
     <ChakraProvider theme={theme}> 
         <App />
     </ChakraProvider>
+    </BrowserRouter>
   </React.StrictMode>,
 ) 
