@@ -93,6 +93,10 @@ def render_app():
 
     btn_col1, btn_col2 = st.sidebar.columns(2)
 
+# Acknowledgment button
+    if st.sidebar.button("Ack"):
+        st.write("[Go back to the blogging app](https://your-blogging-app-url.com)")
+
    
     # Display chat history
     for message in st.session_state.chat_dialogue:
